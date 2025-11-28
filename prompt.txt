@@ -1,7 +1,9 @@
-Now, let's create the structural components that define the dashboard's layout.
+Now, let's build the component for displaying the detailed shipment records: **DataTable.vue**.
 
-Please provide the code for two files:
-1.  **`src/components/layout/TheHeader.vue`**: A simple component that contains a title (e.g., "Customs Analytics Dashboard") and uses a fixed background color (e.g., `bg-white shadow-md`) and height (e.g., `h-16`) with a flexible layout (`flex items-center justify-between`).
-2.  **`src/components/layout/TheSidebar.vue`**: A component that defines a fixed-width navigation panel (e.g., `w-64`) with a distinct background color (e.g., `bg-gray-800 text-white`) and a simple list of navigation links (e.g., "Dashboard," "Reports," "Settings"). This should demonstrate proper structural layout using Tailwind.
+This component is responsible for presenting the final, filtered list of data.
+1.  **Props:** The component must accept the `filteredData` array as a **prop**.
+2.  **Display:** It should use a clean HTML table structure (`<table>`, `<thead>`, `<tbody>`) to display key fields from the shipment objects in the `filteredData` (e.g., Reference ID, Status, Value USD, Date).
+3.  **No Data State:** Implement a conditional message (e.g., "No shipments found matching your criteria") to display when the `filteredData` prop is empty.
+4.  **Styling:** Use Tailwind CSS for table styling (e.g., striped rows, professional header colors, responsive scrolling if needed).
 
-After providing the code for both files, confirm the next task is **Phase 3: Component Scaffolding (Task 5: Filter Controls)**.
+Provide the full code for **DataTable.vue** using the `<script setup>` syntax. Confirm the next task is **Phase 4: Finalization (Task 9: Tailwind Configuration)**.
