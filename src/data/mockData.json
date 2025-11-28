@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "referenceID": "SHIP-KH-2025-0001",
+    "date": "2025-11-25",
+    "status": "Pending",
+    "valueUSD": 13915.2,
+    "processingTimeHours": 60,
+    "description": "Textile products"
+  },
+  {
+    "id": 2,
+    "referenceID": "SHIP-KH-2025-0002",
+    "date": "2025-11-28",
+    "status": "Completed",
+    "valueUSD": 24203.4,
+    "processingTimeHours": 66,
+    "description": "Finished goods"
+  },
+  {
+    "id": 3,
+    "referenceID": "SHIP-KH-2025-0003",
+    "date": "2025-11-28",
+    "status": "Error",
+    "valueUSD": 16182.25,
+    "processingTimeHours": 49,
+    "description": "Automotive parts"
+  },
+  {
+    "id": 4,
+    "referenceID": "SHIP-KH-2025-0004",
+    "date": "2025-11-27",
+    "status": "Error",
+    "valueUSD": 10565.34,
+    "processingTimeHours": 46,
+    "description": "Automotive parts"
+  },
+  {
+    "id": 5,
+    "referenceID": "SHIP-KH-2025-0005",
+    "date": "2025-11-27",
+    "status": "Completed",
+    "valueUSD": 11394.02,
+    "processingTimeHours": 68,
+    "description": "Pharmaceuticals"
+  },
+  {
+    "id": 6,
+    "referenceID": "SHIP-KH-2025-0006",
+    "date": "2025-11-23",
+    "status": "Completed",
+    "valueUSD": 49141.0,
+    "processingTimeHours": 24,
+    "description": "Consumer electronics"
+  },
+  {
+    "id": 7,
+    "referenceID": "SHIP-KH-2025-0007",
+    "date": "2025-11-29",
+    "status": "Pending",
+    "valueUSD": 21877.03,
+    "processingTimeHours": 5,
+    "description": "Fragile items"
+  },
+  {
+    "id": 8,
+    "referenceID": "SHIP-KH-2025-0008",
+    "date": "2025-11-28",
+    "status": "Completed",
+    "valueUSD": 38166.75,
+    "processingTimeHours": 26,
+    "description": "Raw materials"
+  },
+  {
+    "id": 9,
+    "referenceID": "SHIP-KH-2025-0009",
+    "date": "2025-11-27",
+    "status": "Error",
+    "valueUSD": 44431.14,
+    "processingTimeHours": 66,
+    "description": "Raw materials"
+  },
+  {
+    "id": 10,
+    "referenceID": "SHIP-KH-2025-0010",
+    "date": "2025-11-24",
+    "status": "Pending",
+    "valueUSD": 30206.51,
+    "processingTimeHours": 10,
+    "description": "Raw materials"
+  },
+  {
+    "id": 11,
+    "referenceID": "SHIP-KH-2025-0011",
+    "date": "2025-11-23",
+    "status": "Completed",
+    "valueUSD": 49673.81,
+    "processingTimeHours": 6,
+    "description": "Automotive parts"
+  },
+  {
+    "id": 12,
+    "referenceID": "SHIP-KH-2025-0012",
+    "date": "2025-11-22",
+    "status": "Pending",
+    "valueUSD": 23512.27,
+    "processingTimeHours": 68,
+    "description": "Industrial machinery"
+  },
+  {
+    "id": 13,
+    "referenceID": "SHIP-KH-2025-0013",
+    "date": "2025-11-25",
+    "status": "Pending",
+    "valueUSD": 47291.68,
+    "processingTimeHours": 49,
+    "description": "Clothing order"
+  },
+  {
+    "id": 14,
+    "referenceID": "SHIP-KH-2025-0014",
+    "date": "2025-11-24",
+    "status": "Error",
+    "valueUSD": 30588.66,
+    "processingTimeHours": 61,
+    "description": "Finished goods"
+  },
+  {
+    "id": 15,
+    "referenceID": "SHIP-KH-2025-0015",
+    "date": "2025-11-25",
+    "status": "Completed",
+    "valueUSD": 48110.16,
+    "processingTimeHours": 15,
+    "description": "Medical supplies"
+  }
+]

@@ -1,0 +1,7 @@
+Now, let's create the structural components that define the dashboard's layout.
+
+Please provide the code for two files:
+1.  **`src/components/layout/TheHeader.vue`**: A simple component that contains a title (e.g., "Customs Analytics Dashboard") and uses a fixed background color (e.g., `bg-white shadow-md`) and height (e.g., `h-16`) with a flexible layout (`flex items-center justify-between`).
+2.  **`src/components/layout/TheSidebar.vue`**: A component that defines a fixed-width navigation panel (e.g., `w-64`) with a distinct background color (e.g., `bg-gray-800 text-white`) and a simple list of navigation links (e.g., "Dashboard," "Reports," "Settings"). This should demonstrate proper structural layout using Tailwind.
+
+After providing the code for both files, confirm the next task is **Phase 3: Component Scaffolding (Task 5: Filter Controls)**.
