@@ -1,9 +1,7 @@
-Now, let's build the component for displaying the detailed shipment records: **DataTable.vue**.
+Now, we must configure Tailwind CSS for the project.
 
-This component is responsible for presenting the final, filtered list of data.
-1.  **Props:** The component must accept the `filteredData` array as a **prop**.
-2.  **Display:** It should use a clean HTML table structure (`<table>`, `<thead>`, `<tbody>`) to display key fields from the shipment objects in the `filteredData` (e.g., Reference ID, Status, Value USD, Date).
-3.  **No Data State:** Implement a conditional message (e.g., "No shipments found matching your criteria") to display when the `filteredData` prop is empty.
-4.  **Styling:** Use Tailwind CSS for table styling (e.g., striped rows, professional header colors, responsive scrolling if needed).
+Please provide the content for two files:
+1.  **`tailwind.config.js`**: Provide the full content for this file. The `content` array must be correctly configured to scan all Vue and JavaScript files (`./index.html`, `./src/**/*.{vue,js,ts,jsx,tsx}`) so Tailwind can find and include the necessary classes in the final CSS output.
+2.  **`src/assets/main.css`**: Provide the full content for this file. It must contain the three primary Tailwind directives (`@tailwind base;`, `@tailwind components;`, `@tailwind utilities;`) to inject Tailwind's styles into the application.
 
-Provide the full code for **DataTable.vue** using the `<script setup>` syntax. Confirm the next task is **Phase 4: Finalization (Task 9: Tailwind Configuration)**.
+After providing the content for both files, confirm the next task is **Task 10: Final Review**.
