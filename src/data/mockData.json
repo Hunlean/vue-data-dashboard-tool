@@ -133,5 +133,140 @@
     "valueUSD": 48110.16,
     "processingTimeHours": 15,
     "description": "Medical supplies"
+  },
+  {
+    "id": 16,
+    "referenceID": "SHIP-KH-2025-0016",
+    "date": "2025-11-26",
+    "status": "Completed",
+    "valueUSD": 22110.50,
+    "processingTimeHours": 12,
+    "description": "Electronics components"
+  },
+  {
+    "id": 17,
+    "referenceID": "SHIP-KH-2025-0017",
+    "date": "2025-11-27",
+    "status": "Pending",
+    "valueUSD": 34500.00,
+    "processingTimeHours": 30,
+    "description": "Heavy machinery parts"
+  },
+  {
+    "id": 18,
+    "referenceID": "SHIP-KH-2025-0018",
+    "date": "2025-11-28",
+    "status": "Error",
+    "valueUSD": 18765.99,
+    "processingTimeHours": 72,
+    "description": "Chemical raw materials"
+  },
+  {
+    "id": 19,
+    "referenceID": "SHIP-KH-2025-0019",
+    "date": "2025-11-29",
+    "status": "Completed",
+    "valueUSD": 41234.10,
+    "processingTimeHours": 48,
+    "description": "Agricultural products"
+  },
+  {
+    "id": 20,
+    "referenceID": "SHIP-KH-2025-0020",
+    "date": "2025-11-25",
+    "status": "Pending",
+    "valueUSD": 9876.50,
+    "processingTimeHours": 20,
+    "description": "Office supplies"
+  },
+  {
+    "id": 21,
+    "referenceID": "SHIP-KH-2025-0021",
+    "date": "2025-11-24",
+    "status": "Error",
+    "valueUSD": 27345.60,
+    "processingTimeHours": 55,
+    "description": "Industrial chemicals"
+  },
+  {
+    "id": 22,
+    "referenceID": "SHIP-KH-2025-0022",
+    "date": "2025-11-23",
+    "status": "Completed",
+    "valueUSD": 19000.00,
+    "processingTimeHours": 18,
+    "description": "Medical equipment"
+  },
+  {
+    "id": 23,
+    "referenceID": "SHIP-KH-2025-0023",
+    "date": "2025-11-22",
+    "status": "Pending",
+    "valueUSD": 33210.80,
+    "processingTimeHours": 40,
+    "description": "Construction materials"
+  },
+  {
+    "id": 24,
+    "referenceID": "SHIP-KH-2025-0024",
+    "date": "2025-11-21",
+    "status": "Completed",
+    "valueUSD": 45678.90,
+    "processingTimeHours": 28,
+    "description": "Vehicle spare parts"
+  },
+  {
+    "id": 25,
+    "referenceID": "SHIP-KH-2025-0025",
+    "date": "2025-11-20",
+    "status": "Error",
+    "valueUSD": 14500.25,
+    "processingTimeHours": 65,
+    "description": "Specialized tools"
+  },
+  {
+    "id": 26,
+    "referenceID": "SHIP-KH-2025-0026",
+    "date": "2025-11-19",
+    "status": "Pending",
+    "valueUSD": 28900.00,
+    "processingTimeHours": 35,
+    "description": "Furniture"
+  },
+  {
+    "id": 27,
+    "referenceID": "SHIP-KH-2025-0027",
+    "date": "2025-11-18",
+    "status": "Completed",
+    "valueUSD": 39876.50,
+    "processingTimeHours": 50,
+    "description": "Industrial pipes"
+  },
+  {
+    "id": 28,
+    "referenceID": "SHIP-KH-2025-0028",
+    "date": "2025-11-17",
+    "status": "Error",
+    "valueUSD": 11200.00,
+    "processingTimeHours": 70,
+    "description": "Delicate instruments"
+  },
+  {
+    "id": 29,
+    "referenceID": "SHIP-KH-2025-0029",
+    "date": "2025-11-16",
+    "status": "Pending",
+    "valueUSD": 42500.00,
+    "processingTimeHours": 22,
+    "description": "Heavy machinery"
+  },
+  {
+    "id": 30,
+    "referenceID": "SHIP-KH-2025-0030",
+    "date": "2025-11-15",
+    "status": "Completed",
+    "valueUSD": 30123.45,
+    "processingTimeHours": 44,
+    "description": "Consumer goods"
   }
 ]

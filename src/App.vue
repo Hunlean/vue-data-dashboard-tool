@@ -1,47 +1,25 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import { RouterView } from 'vue-router'
+import TheSidebar from '@/components/layout/TheSidebar.vue';
+import TheHeader from '@/components/layout/TheHeader.vue';
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div class="min-h-screen bg-gray-50 flex font-sans">
+    
+    <TheSidebar />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+    <div class="flex-1 flex flex-col ml-64 transition-all duration-300">
+      
+      <TheHeader />
+
+      <main class="flex-1 p-8 overflow-y-auto">
+        <RouterView />
+      </main>
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>

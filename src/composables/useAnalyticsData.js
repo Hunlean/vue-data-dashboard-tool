@@ -1,88 +1,104 @@
-import { ref, reactive, computed } from 'vue';
-import mockData from '../data/mockData.json';
+import { ref, reactive, computed, onMounted } from 'vue';
+import mockData from '@/data/mockData.json';
+
+
+const rawData = ref([]);
+const isLoading = ref(false);
+const error = ref(null);
+
+const metrics = reactive({
+    totalShipments: 0,
+    averageValueUSD: 0,
+    errorRate: '0%',
+});
+
+const filters = reactive({
+    searchQuery: '',
+    status: 'All',
+});
+
+
+const resetFilters = () => {
+    filters.searchQuery = '';
+    filters.status = 'All';
+};
+
 
 export function useAnalyticsData() {
-  // Reactive state
-  const rawData = ref([]);
-  const isLoading = ref(false);
-  const error = ref(null);
 
-  const metrics = reactive({
-    totalShipments: 0,
-    averageValue: 0,
-    errorRate: 0,
-  });
+    
+    const updateMetrics = (data) => {
+        if (!data || data.length === 0) {
+             metrics.totalShipments = 0;
+             metrics.averageValueUSD = 0;
+             metrics.errorRate = '0%';
+             return;
+        }
 
-  const filters = reactive({
-    searchQuery: '',
-    status: 'All', // 'All', 'Completed', 'Pending', 'Error'
-  });
+        const totalErrors = data.filter(item => item.status === 'Error').length;
+        
+        const totalValue = data.reduce((sum, item) => sum + Number(item.valueUSD), 0);
 
-  // Data fetching
-  const fetchData = () => {
-    isLoading.value = true;
-    error.value = null;
-    setTimeout(() => {
-      try {
-        rawData.value = mockData;
-        updateMetrics();
-      } catch (e) {
-        error.value = 'Failed to load data.';
-        console.error(e);
-      } finally {
-        isLoading.value = false;
-      }
-    }, 500); // Simulate network latency
-  };
+        metrics.totalShipments = data.length;
+        metrics.averageValueUSD = Math.round(totalValue / data.length).toLocaleString();
+        metrics.errorRate = `${((totalErrors / data.length) * 100).toFixed(1)}%`;
+    };
 
-  // Metrics calculation
-  const updateMetrics = () => {
-    const data = rawData.value;
-    if (!data || data.length === 0) {
-      metrics.totalShipments = 0;
-      metrics.averageValue = 0;
-      metrics.errorRate = 0;
-      return;
-    }
+    
+    const filteredData = computed(() => {
+        let data = rawData.value;
+        
+        if (filters.searchQuery) {
+            const query = filters.searchQuery.toLowerCase();
+            data = data.filter(item => 
+                item.referenceID.toLowerCase().includes(query) ||
+                (item.description && item.description.toLowerCase().includes(query))
+            );
+        }
+        
+        if (filters.status && filters.status !== 'All') {
+            data = data.filter(item => item.status === filters.status);
+        }
+        
+        return data;
+    });
 
-    metrics.totalShipments = data.length;
+    const fetchData = async () => {
+        if (isLoading.value) return; 
+        if (rawData.value.length > 0) return; 
+        isLoading.value = true;
+        error.value = null;
 
-    const totalValue = data.reduce((sum, record) => sum + record.valueUSD, 0);
-    metrics.averageValue = totalValue / data.length;
+        try {
+            
+            await new Promise(resolve => setTimeout(resolve, 500)); 
+            
+            
+            rawData.value = mockData;
+            
+            
+            updateMetrics(mockData);
 
-    const errorCount = data.filter(r => r.status === 'Error').length;
-    metrics.errorRate = (errorCount / data.length) * 100;
-  };
+        } catch (err) {
+            console.error("Data Fetch Error:", err);
+            error.value = 'Failed to load data.';
+        } finally {
+            isLoading.value = false;
+        }
+    };
 
-  // Filtering logic
-  const filteredData = computed(() => {
-    let data = rawData.value;
+    
+    onMounted(() => {
+        fetchData();
+    });
 
-    // Filter by status
-    if (filters.status !== 'All') {
-      data = data.filter(record => record.status === filters.status);
-    }
-
-    // Filter by search query
-    if (filters.searchQuery) {
-      const query = filters.searchQuery.toLowerCase();
-      data = data.filter(record => 
-        record.referenceID.toLowerCase().includes(query) ||
-        record.description.toLowerCase().includes(query)
-      );
-    }
-
-    return data;
-  });
-
-  // Return composable API
-  return {
-    rawData,
-    isLoading,
-    error,
-    metrics,
-    filters,
-    fetchData,
-    filteredData,
-  };
+    return {
+        metrics,
+        filters,
+        isLoading,
+        error,
+        filteredData,
+        fetchData,
+        resetFilters 
+    };
 }

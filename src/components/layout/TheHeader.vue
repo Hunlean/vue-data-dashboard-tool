@@ -1,17 +1,13 @@
 <template>
-  <header class="bg-white shadow-md h-16 flex items-center justify-between px-6">
-    <div class="text-2xl font-semibold text-gray-800">
-      Customs Analytics Dashboard
+  <header class="bg-base-200 h-20 flex items-center justify-between px-8 shadow-sm">
+    <div class="flex items-center space-x-4">
+      <h1 class="text-2xl font-bold text-neutral-800">
+        Welcome Back, Kim!
+      </h1>
+      <span class="text-2xl">👋</span>
     </div>
-    <!-- Potentially add user info or other header elements here later -->
-    <div></div> 
   </header>
 </template>
 
 <script setup>
-// No script logic needed for a simple header
 </script>
-
-<style scoped>
-/* Scoped styles for the header can go here if needed */
-</style>
