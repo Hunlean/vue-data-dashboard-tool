@@ -8,8 +8,7 @@
 
 > A modern, reactive Single Page Application (SPA) designed to visualize shipment manifests, track KPIs, and analyze import/export performance.
 
-![Dashboard Preview](https://github.com/user-attachments/assets/PLACEHOLDER_FOR_YOUR_SCREENSHOT)
-*(Note: Replace the link above with your actual screenshot link after uploading an image to GitHub)*
+![Dashboard Preview](https://github.com/user-attachments/assets/d4c91732-838f-480c-bdd0-32f4169e95d3)
 
 ## 🚀 Project Overview
 
