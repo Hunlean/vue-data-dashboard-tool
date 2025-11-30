@@ -81,7 +81,7 @@ Follow these steps to get a local copy of the project running:
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/Hunlean/vue-data-dashboard-tool.git](https://github.com/Hunlean/vue-data-dashboard-tool.git)
+    git clone https://github.com/Hunlean/vue-data-dashboard-tool.git
     cd vue-data-dashboard-tool
     ```
 2.  **Install Dependencies:**
